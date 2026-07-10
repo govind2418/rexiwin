@@ -6,13 +6,21 @@ import { CTASection } from "@/components/ui/CTASection";
 import { StepList } from "@/components/guides/StepList";
 import { PhoneMockup } from "@/components/download/PhoneMockup";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, howToSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Download App",
+  title: "Raxi Game App Download — Official Install Guide",
   description:
-    "How to download and install the Raxi Win app safely, plus tips for verifying you have the genuine, secure version.",
+    "How to download and install the official Raxi Win app (Raxi Game) safely, plus tips for verifying you have the genuine, secure version.",
   path: "/download-app",
+  keywords: [
+    "Raxi Win App",
+    "Raxi App Download",
+    "Raxi Game Download",
+    "Rexi Game Download",
+    "Raxi Win Download",
+    "Raxi Win Install",
+  ],
 });
 
 const installSteps = [
@@ -66,6 +74,13 @@ export default function DownloadAppPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd
+        data={howToSchema({
+          name: "How to Download the Raxi Win App",
+          description: "Step-by-step guide to safely downloading and installing the official Raxi Win (Raxi Game) app.",
+          steps: installSteps,
+        })}
+      />
       <Breadcrumb items={crumbs} />
 
       <div className="mt-8">

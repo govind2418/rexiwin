@@ -8,10 +8,17 @@ import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Game Information",
+  title: "Raxi Game Information — Categories & Rules",
   description:
-    "An overview of the game categories available on Raxi Win, how each format is generally structured, and where to find official rules for each game.",
+    "An overview of Raxi Game categories available on Raxi Win, how each format is generally structured, and where to find official rules for each game.",
   path: "/game-information",
+  keywords: [
+    "Raxi Game",
+    "Rexi Game",
+    "Raxi Win Games",
+    "Raxi Win Game Categories",
+    "Raxi Win Game Rules",
+  ],
 });
 
 const categories = [
@@ -72,8 +79,8 @@ export default function GameInformationPage() {
           align="left"
           as="h1"
           eyebrow="Explore Games"
-          title="Game Information"
-          description="A general look at the categories available on Raxi Win. Specific rules, options, and payout details live inside each game's in-app rules screen."
+          title="Raxi Game Information"
+          description="A general look at the Raxi Game categories available on Raxi Win. Specific rules, options, and payout details live inside each game's in-app rules screen."
         />
       </div>
 

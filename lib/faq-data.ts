@@ -23,6 +23,12 @@ export const faqData: FaqItem[] = [
   },
   {
     category: "Getting Started",
+    question: "Is Raxi Win the same as Raxi Game or Rexi Game?",
+    answer:
+      "Yes. \"Raxi Win,\" \"Raxi Game,\" \"Rexi Game,\" and simply \"Raxi\" all refer to the same official platform at rexiwin.in.net. The spelling variations come from how people search, not from separate apps — always confirm you're on rexiwin.in.net or our verified Telegram channel before logging in or downloading anything.",
+  },
+  {
+    category: "Getting Started",
     question: "Who can use Raxi Win?",
     answer:
       "Raxi Win is intended for adults aged 18 and above who reside in a region where real-money gaming is legally permitted. Please review local regulations before creating an account.",
@@ -58,6 +64,12 @@ export const faqData: FaqItem[] = [
       "Raxi Win focuses on three things: fast access with minimal friction, transparent information about how the platform works, and round-the-clock support so questions get answered quickly.",
   },
   // Account & Login
+  {
+    category: "Account & Login",
+    question: "Where is the official Raxi login page?",
+    answer:
+      "The official Raxi login is available through the Raxi Win app or at rexiwin.in.net. Enter your registered mobile number or email and password on the login screen — see our full Login Guide for a step-by-step walkthrough, including password recovery.",
+  },
   {
     category: "Account & Login",
     question: "How do I create a Raxi Win account?",

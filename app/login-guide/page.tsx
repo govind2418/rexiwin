@@ -5,13 +5,21 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { CTASection } from "@/components/ui/CTASection";
 import { StepList } from "@/components/guides/StepList";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, howToSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Login Guide",
+  title: "Login Guide — Raxi Login Help & Password Recovery",
   description:
-    "Step-by-step help for logging into Raxi Win, recovering a forgotten password, and resolving common login issues.",
+    "Official Raxi Win login guide: step-by-step help for the Raxi login process, recovering a forgotten password, and resolving common Raxi Win login issues.",
   path: "/login-guide",
+  keywords: [
+    "Raxi Login",
+    "Raxi Win Login",
+    "Raxi Game Login",
+    "Rexi Game Login",
+    "Raxi Win Password Reset",
+    "Raxi Win Sign In",
+  ],
 });
 
 const loginSteps = [
@@ -80,6 +88,13 @@ export default function LoginGuidePage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd
+        data={howToSchema({
+          name: "Raxi Login: How to Log In to Raxi Win",
+          description: "Step-by-step Raxi login process, including how to recover a forgotten password.",
+          steps: loginSteps,
+        })}
+      />
       <Breadcrumb items={crumbs} />
 
       <div className="mt-8">
@@ -87,8 +102,8 @@ export default function LoginGuidePage() {
           align="left"
           as="h1"
           eyebrow="Access Your Account"
-          title="How to Log In to Raxi Win"
-          description="A quick reference for signing in, recovering your password, and fixing common issues."
+          title="Raxi Login: How to Log In to Raxi Win"
+          description="A quick reference for the Raxi login process — signing in, recovering your password, and fixing common issues."
         />
       </div>
 

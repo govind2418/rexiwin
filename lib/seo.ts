@@ -18,7 +18,11 @@ export function buildMetadata({ title, description, path, keywords }: PageSeoInp
   const fullTitle = path === "/" ? title : `${title} | ${siteConfig.name}`;
 
   return {
-    title: fullTitle,
+    // `absolute` opts out of the root layout's title.template — buildMetadata
+    // already composes the full "Page | Raxi Win" string itself, and every
+    // route except "/" sits in a nested segment where the template would
+    // otherwise re-apply and duplicate the site name.
+    title: { absolute: fullTitle },
     description,
     keywords: keywords ?? [...siteConfig.keywords],
     alternates: {

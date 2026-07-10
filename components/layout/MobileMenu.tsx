@@ -47,6 +47,15 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/search"
+                onClick={() => setOpen(false)}
+                className="block rounded-luxury px-3 py-3 text-base text-text-secondary hover:bg-surface hover:text-white"
+              >
+                Search
+              </Link>
+            </li>
           </ul>
           <div className="mt-4 flex flex-col gap-3 border-t border-border pt-4">
             <Link

@@ -26,6 +26,24 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Link
+            href="/search"
+            aria-label="Search Raxi Win"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-text-secondary transition-colors hover:border-gold/40 hover:text-gold"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+              className="h-4 w-4"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path strokeLinecap="round" d="m20 20-3.5-3.5" />
+            </svg>
+          </Link>
+          <Link
             href="/login-guide"
             className="rounded-full border border-gold/30 px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:border-primary hover:text-white"
           >

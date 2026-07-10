@@ -30,7 +30,10 @@ export function websiteSchema() {
     url: siteConfig.url,
     potentialAction: {
       "@type": "SearchAction",
-      target: `${siteConfig.url}/search?q={search_term_string}`,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
@@ -60,6 +63,29 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
         "@type": "Answer",
         text: faq.answer,
       },
+    })),
+  };
+}
+
+export function howToSchema({
+  name,
+  description,
+  steps,
+}: {
+  name: string;
+  description: string;
+  steps: { title: string; description: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
     })),
   };
 }

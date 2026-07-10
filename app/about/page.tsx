@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -8,10 +9,11 @@ import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Raxi Win",
+  title: "About — The Official Raxi Game Platform",
   description:
-    "Learn about Raxi Win's mission, the principles behind the platform, and the safety commitments that shape how we build.",
+    "Learn about Raxi Win (also searched as Raxi Game, Rexi Game, or Raxi)'s mission, the principles behind the platform, and the safety commitments that shape how we build.",
   path: "/about",
+  keywords: ["About Raxi Win", "Raxi Game", "Rexi Game", "Raxi", "Raxi Win Official"],
 });
 
 const pillars = [
@@ -69,6 +71,20 @@ export default function AboutPage() {
           <StatCard icon={<ClockIcon />} value="24x7" label="Support Coverage" />
           <StatCard icon={<ShieldIcon />} value="Licensed" label="Platform Status" />
         </div>
+      </section>
+
+      <section className="mt-16 glass-card p-6 sm:p-8">
+        <h2 className="font-display text-xl font-semibold text-white">Raxi Win, Raxi Game, Rexi Game — same platform</h2>
+        <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+          Players find us through a few different searches — “Raxi Win,” “Raxi Game,” “Rexi Game,” or
+          just “Raxi.” These all refer to the same official platform at{" "}
+          <Link href="/" className="text-gold hover:underline">
+            rexiwin.in.net
+          </Link>
+          . If you landed here searching for a Raxi login, Raxi register page, or the Raxi Win app
+          download, you&apos;re in the right place — this website is our official source for account
+          guides, game information, and support.
+        </p>
       </section>
 
       <section className="mt-20">

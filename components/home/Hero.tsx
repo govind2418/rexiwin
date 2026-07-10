@@ -17,6 +17,11 @@ export function Hero() {
           <p className="max-w-lg text-base text-text-secondary sm:text-lg">
             Fast &bull; Secure &bull; Mobile Friendly
           </p>
+          <p className="max-w-lg text-sm text-text-secondary">
+            Raxi Win — also searched as Raxi Game, Rexi Game, or simply Raxi — is a licensed
+            real-money gaming platform. This site is the official source for Raxi login, Raxi Win
+            register, and app download guidance.
+          </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button href="/register-guide" variant="gold">
               Register Now

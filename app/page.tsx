@@ -13,10 +13,23 @@ import { buildMetadata } from "@/lib/seo";
 import { JsonLd, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Raxi Win | Play Smarter with a Licensed Gaming Platform",
+  title: "Raxi Win | Official Raxi Game Platform — Login, Register & Play",
   description:
-    "Raxi Win is a licensed real-money gaming platform built for speed and security. Explore guides for registration, login, results, promotions, and 24x7 support.",
+    "Raxi Win (Raxi Game) is a licensed real-money gaming platform built for speed and security. Find official Raxi login, register, and download links, plus guides for results, promotions, and 24x7 support.",
   path: "/",
+  keywords: [
+    "Raxi Win",
+    "Raxi",
+    "Raxi Game",
+    "Rexi Game",
+    "Rexi Win",
+    "Raxi Login",
+    "Raxi Win Login",
+    "Raxi Win Register",
+    "Raxi Win App",
+    "Raxi Win Download",
+    "Raxi Win Official",
+  ],
 });
 
 const benefits = [

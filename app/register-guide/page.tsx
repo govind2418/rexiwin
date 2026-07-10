@@ -5,13 +5,21 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { CTASection } from "@/components/ui/CTASection";
 import { StepList } from "@/components/guides/StepList";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema } from "@/lib/schema";
+import { JsonLd, breadcrumbSchema, howToSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Register Guide",
+  title: "Raxi Register Guide — Create Your Account",
   description:
-    "A simple, step-by-step walkthrough for creating your Raxi Win account, setting it up correctly, and completing verification.",
+    "A simple, step-by-step Raxi Win register walkthrough for creating your Raxi account, setting it up correctly, and completing verification.",
   path: "/register-guide",
+  keywords: [
+    "Raxi Win Register",
+    "Raxi Register",
+    "Raxi Win Sign Up",
+    "Raxi Game Register",
+    "Rexi Game Register",
+    "Raxi Win Account",
+  ],
 });
 
 const registerSteps = [
@@ -69,6 +77,13 @@ export default function RegisterGuidePage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd
+        data={howToSchema({
+          name: "How to Register on Raxi Win",
+          description: "Step-by-step Raxi Win register process, from opening the sign-up screen to completing verification.",
+          steps: registerSteps,
+        })}
+      />
       <Breadcrumb items={crumbs} />
 
       <div className="mt-8">
