@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #090909;
+  --color-bg-soft: #0f0f0f;
+  --color-surface: #131313;
+  --color-surface-2: #1a1516;
+  --color-primary: #d62828;
+  --color-primary-dark: #8f1c1c;
+  --color-primary-light: #ff4d4d;
+  --color-gold: #f4c542;
+  --color-gold-soft: #ffe28a;
+  --color-gold-dark: #b98d1f;
+  --color-text: #ffffff;
+  --color-text-secondary: #bfbfbf;
+  --color-border: #2a2a2a;
+
+  --radius-luxury: 20px;
+  --radius-luxury-lg: 28px;
+
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
+html {
+  color-scheme: dark;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: #090909;
+}
+
+/* Luxury glass card */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(244, 197, 66, 0.14);
+  border-radius: var(--radius-luxury);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.7);
+}
+
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(120deg, #b98d1f 0%, #f4c542 45%, #ffe28a 60%, #f4c542 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Luxury gold button */
+.btn-gold {
+  background: linear-gradient(135deg, #f4c542 0%, #d6a334 55%, #b98d1f 100%);
+  color: #100a00;
+  box-shadow: 0 8px 24px -8px rgba(244, 197, 66, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #ffe28a 0%, #f4c542 55%, #d6a334 100%);
+  box-shadow: 0 10px 30px -8px rgba(244, 197, 66, 0.75);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(244, 197, 66, 0.4);
+  color: var(--color-gold);
+  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(214, 40, 40, 0.1);
+  color: #ffffff;
+}
+
+.section-glow {
+  background: radial-gradient(60% 50% at 50% 0%, rgba(214, 40, 40, 0.16), transparent 70%);
+}
+
+@keyframes float-particle {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-18px) translateX(6px);
+    opacity: 1;
+  }
+}
+
+.particle {
+  animation: float-particle 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Reading progress bar */
+.reading-progress {
+  transform-origin: left;
+  transition: transform 0.1s linear;
 }
