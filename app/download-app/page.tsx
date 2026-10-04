@@ -7,6 +7,7 @@ import { StepList } from "@/components/guides/StepList";
 import { PhoneMockup } from "@/components/download/PhoneMockup";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, howToSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Raxi Game App Download — Official Install Guide",
@@ -138,7 +139,7 @@ export default function DownloadAppPage() {
           title="Ready to install Raxi Win?"
           description="Grab the app for the fastest experience, or register first if you don't have an account yet."
           primaryLabel="Register Now"
-          primaryHref="/register-guide"
+          primaryHref={siteConfig.accountUrl}
           secondaryLabel="Read Login Guide"
           secondaryHref="/login-guide"
         />

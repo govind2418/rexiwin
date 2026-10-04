@@ -1,4 +1,5 @@
 export const siteConfig = {
+  accountUrl: "https://www.raxi1.com/#/register?invitationCode=27913203396",
   name: "Raxi Win",
   tagline: "Play Smarter with Raxi Win",
   description:

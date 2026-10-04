@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { primaryNav } from "@/lib/nav";
+import { siteConfig } from "@/lib/site-config";
 
 export function Navbar() {
   return (
@@ -43,18 +44,18 @@ export function Navbar() {
               <path strokeLinecap="round" d="m20 20-3.5-3.5" />
             </svg>
           </Link>
-          <Link
-            href="/login-guide"
+          <a
+            href={siteConfig.accountUrl}
             className="rounded-full border border-gold/30 px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:border-primary hover:text-white"
           >
             Login
-          </Link>
-          <Link
-            href="/register-guide"
+          </a>
+          <a
+            href={siteConfig.accountUrl}
             className="btn-gold rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             Register
-          </Link>
+          </a>
           <Link
             href="/download-app"
             className="rounded-full bg-surface px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-surface-2"

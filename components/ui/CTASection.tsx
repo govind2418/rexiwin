@@ -1,10 +1,11 @@
 import { Button } from "./Button";
+import { siteConfig } from "@/lib/site-config";
 
 export function CTASection({
   title,
   description,
   primaryLabel = "Register Now",
-  primaryHref = "/register-guide",
+  primaryHref = siteConfig.accountUrl,
   secondaryLabel = "Download App",
   secondaryHref = "/download-app",
 }: {

@@ -6,6 +6,7 @@ import { CTASection } from "@/components/ui/CTASection";
 import { StepList } from "@/components/guides/StepList";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Referral Program",
@@ -104,7 +105,7 @@ export default function ReferralProgramPage() {
           title="Start referring today"
           description="Register for an account to get your unique referral code."
           primaryLabel="Register Now"
-          primaryHref="/register-guide"
+          primaryHref={siteConfig.accountUrl}
           secondaryLabel="View Promotions"
           secondaryHref="/promotions"
         />

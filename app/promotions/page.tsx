@@ -6,6 +6,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { CTASection } from "@/components/ui/CTASection";
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Promotions & Rewards",
@@ -117,7 +118,7 @@ export default function PromotionsPage() {
           primaryLabel="Referral Program"
           primaryHref="/referral-program"
           secondaryLabel="Register Now"
-          secondaryHref="/register-guide"
+          secondaryHref={siteConfig.accountUrl}
         />
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { NavLink } from "@/lib/nav";
+import { siteConfig } from "@/lib/site-config";
 
 export function MobileMenu({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
@@ -58,20 +59,20 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
             </li>
           </ul>
           <div className="mt-4 flex flex-col gap-3 border-t border-border pt-4">
-            <Link
-              href="/login-guide"
+            <a
+              href={siteConfig.accountUrl}
               onClick={() => setOpen(false)}
               className="rounded-full border border-gold/30 px-5 py-3 text-center text-sm font-semibold text-gold"
             >
               Login
-            </Link>
-            <Link
-              href="/register-guide"
+            </a>
+            <a
+              href={siteConfig.accountUrl}
               onClick={() => setOpen(false)}
               className="btn-gold rounded-full px-5 py-3 text-center text-sm font-semibold"
             >
               Register
-            </Link>
+            </a>
             <Link
               href="/download-app"
               onClick={() => setOpen(false)}

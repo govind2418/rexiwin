@@ -23,7 +23,7 @@ export function Hero() {
             register, and app download guidance.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button href="/register-guide" variant="gold">
+            <Button href={siteConfig.accountUrl} variant="gold">
               Register Now
             </Button>
             <Button href="/download-app" variant="outline">
